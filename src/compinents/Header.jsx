@@ -10,7 +10,7 @@ export default function Header() {
       <div className='h-16'>
         <Navbar/>
       </div>
-      <div className='bg-gradient-to-r from-blue-600 to-blue-500 rounded-b-lg w-full p-5 flex justify-around items-center flex-wrap'>
+      <div className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-b-lg w-full p-5 flex justify-around items-center flex-wrap'>
         <div className='basis-80 pt-10 sm:p-0 text-white'>
           <p className='text-center mb-2'>Welcome to it-support</p>
           <p className='text-center mb-5 text-xl sm:text-2xl'>Hungry For Challenges<span className='font-bold border-b-2'> Impact and More!</span></p>
