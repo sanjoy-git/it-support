@@ -6,6 +6,7 @@ import Lutfor from '../assets/team/lutfor-rahaman-m.jpg'
 import Razib from '../assets/team/razib-hossain-m.jpg'
 import Sanjoy from '../assets/team/sanjoy-roy-m.jpg'
 import Tanvir from '../assets/team/tanvir-ahmed-niloy-m.jpg'
+import Imran from '../assets/team/imran-taher-m.jpg'
 
 
 const team=[
@@ -32,6 +33,11 @@ const team=[
   {
     img:Tanvir,
     name:"Tanvir Ahmed Niloy",
+    deg:"Coller"
+  },
+  {
+    img:Imran,
+    name:"Imran Taher",
     deg:"Coller"
   },
 ]
@@ -79,14 +85,14 @@ export default function OurTeam() {
 
 
   return (
-    <div className='text-center w-10/12 mx-auto'>
-      <h2 className='p-5 font-bold text-xl text-blue-900 underline underline-offset-4'>Our Team</h2>
-      <Slider {...settings} className='bg-white py-3 pt-5 rounded-md'>
+    <div className='w-10/12 pt-10 mx-auto text-center'>
+      <h2 className='p-5 text-xl font-bold text-blue-900 underline underline-offset-4'>Our Team</h2>
+      <Slider {...settings} className='py-3 pt-5 bg-white rounded-md'>
         {
-          team.map(item=>{
+          team.map((item,index)=>{
             return(
-              <div className='p-1 py-3'>
-                <img className='rounded-full w-28 mx-auto' src={item.img} alt="" />
+              <div key={index} className='p-1 py-3'>
+                <img className='mx-auto rounded-full w-28' src={item.img} alt="" />
                 <h3>{item.name}</h3>
                 <p>{item.deg}</p>
               </div>

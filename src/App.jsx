@@ -1,29 +1,45 @@
 import React from 'react'
-import Header from './compinents/Header'
-import About from './pages/About'
-import Services from './pages/Services'
-import Contact from './pages/Contact'
-import Footer from './compinents/Footer'
-import OurTeam from './pages/OurTeam'
+import Header from './components/Header'
+import About from './components/About'
+import Services from './components/Services'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+import OurTeam from './components/OurTeam'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import WhyChoose from './components/WhyChoose'
+import NumberOf from './components/NumberOf'
 
 export default function App() {
   return (
     <div className='bg-slate-50'>
-      <Header/>
-      <div id='about'>
+      <section id='home'>
+        <Header/>
+      </section>
+      
+      <section id='about'>
         <About/>
-      </div>
-      <div id='services'>
+      </section>
+
+      <section id='services'>
         <Services/>
-      </div>
-      <div id='team'>
+      </section>
+
+      <section id='ourteam'>
         <OurTeam/>
-      </div>
-      <div id='contact'>
+      </section>
+
+      <section className='w-full text-center pt-20'>
+        <NumberOf/>
+      </section>
+
+      <WhyChoose/>
+
+      <section id='contact'>
         {/* <Contact/> */}
-      </div>
+      </section>
+
+
       <Footer/>
     </div>
   )
