@@ -12,7 +12,7 @@ import Imran from '../assets/team/imran-taher-m.jpg'
 const team=[
   {
     img:Lutfor,
-    name:"Lutfor Rahaman Khan",
+    name:"Khan L Rahaman",
     deg:"Founder"
   },
   {
@@ -28,19 +28,37 @@ const team=[
   {
     img:Jamal,
     name:"Jamal Molla",
-    deg:"Coller"
+    deg:"Executive IT"
   },
   {
     img:Tanvir,
     name:"Tanvir Ahmed Niloy",
-    deg:"Coller"
+    deg:"Staff-Support"
   },
   {
     img:Imran,
     name:"Imran Taher",
-    deg:"Coller"
+    deg:"Staff-Support"
   },
 ]
+
+
+
+
+function SampleArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black",borderRadius:'5px',padding:'.5px' }}
+      onClick={onClick}
+    />
+  );
+}
+
+
+
+
 
 export default function OurTeam() {
 
@@ -52,17 +70,21 @@ export default function OurTeam() {
     slidesToScroll: 4,
     initialSlide: 0,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 5000,
+    autoplaySpeed: 5000,
     cssEase: "linear",
+
+    nextArrow: <SampleArrow />,
+    prevArrow: <SampleArrow />,
+
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          // infinite: true,
-          // dots: false
+          infinite: true,
+          dots: false
         }
       },
       {
@@ -85,16 +107,16 @@ export default function OurTeam() {
 
 
   return (
-    <div className='w-10/12 pt-10 mx-auto text-center'>
-      <h2 className='p-5 text-xl font-bold text-blue-900 underline underline-offset-4'>Our Team</h2>
-      <Slider {...settings} className='py-3 pt-5 bg-white rounded-md'>
+    <div className='pt-10 text-center mx-auto w-10/12'>
+      <h2 className='p-5 text-xl font-bold text-blue-900 underline underline-offset-4 sm:text-2xl'>Our Team</h2>
+      <Slider {...settings} className='py-3 rounded-md'>
         {
           team.map((item,index)=>{
             return(
-              <div key={index} className='p-1 py-3'>
+              <div key={index} className='p-1 py-3 bg-white border-2 rounded-xl'>
                 <img className='mx-auto rounded-full w-28' src={item.img} alt="" />
-                <h3>{item.name}</h3>
-                <p>{item.deg}</p>
+                <h3 className='font-semibold pt-1'>{item.name}</h3>
+                <p className='text-sm'>{item.deg}</p>
               </div>
             )
           })

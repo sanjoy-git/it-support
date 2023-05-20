@@ -1,41 +1,46 @@
 import React from 'react'
-import Facebook from '../assets/facebook.png'
-import ContentReserch from '../assets/content and research.png'
-import Ecommerce from '../assets/ecommerce.png'
-import Webdevlop from '../assets/webdevelop.png'
-import Caller from '../assets/caller.png'
-import DigitalMarketing from '../assets/digitalmarketing.png'
+import digitalMarketing from '../assets/digital-marketing.webp'
+import webDev from '../assets/web-design-1.jpg'
+import softworeDev from '../assets/softwore.jpg'
+import itSupport from '../assets/it-support-1.png'
 
 const serviceData=[
   {
-    img:DigitalMarketing,
-    text:'Digital Marketing'
+    img:digitalMarketing,
+    textTitle:'Digital Marketing',
+    textBody:'Digital marketing refers to the practice of promoting products, services, or brands using digital channels and technologies.'
   },
   {
-    img:Webdevlop,
-    text:'Website Design and Development'
+    img:webDev,
+    textTitle:'Web Design and Development',
+    textBody:' IT companies specialize in creating visually appealing and user-friendly websites. They handle everything from website des'
   },
   {
-    img:Caller,
-    text:'Calling Service'
+    img:softworeDev,
+    textTitle:'Software Development:',
+    textBody:'These companies often specialize in custom software development. They create tailored software solutions to address specifi'
   },
   {
-    img:ContentReserch,
-    text:'Content Writing and Reserch'
+    img:itSupport,
+    textTitle:'IT Support and Maintenance',
+    textBody:'They provide technical support and maintenance services to ensure the smooth operation of IT systems. This can include troub'
   }
 ]
 
 
 export default function Services() {
   return (
-    <div className='text-center p-3 pt-14'>
-      <h2 className='p-5 font-bold text-xl text-blue-900 underline underline-offset-4'>Our Services</h2>
-      <div className='w-full flex justify-center flex-wrap'>
+    <div className='p-3 text-center pt-14 mx-auto sm:w-10/12'>
+      <h2 className='p-5 text-xl font-bold text-blue-900 underline underline-offset-4 sm:text-2xl'>Our Service</h2>
+      <div className='flex flex-wrap justify-center w-full'>
         {serviceData && serviceData.map((item,index)=>{
           return(
-            <div key={index} className='basis-68 flex-grow h-auto ml-3 mb-3 bg-white rounded-md flex flex-col justify-between pb-5' >
-              <img className='w-7/12 mx-auto  object-cover p-5' src={item.img} alt="" />
-              <p className='font-bold'>{item.text}</p>
+            <div key={index} className='flex flex-col justify-between flex-grow pb-5 mb-3 ml-3 bg-white rounded-md basis-68 sm:basis-52' >
+              <img className='object-cover w-7/12 p-5 mx-auto' src={item.img} alt="" />
+              <div className=''>
+                <h2 className='font-bold'>{item.textTitle}</h2>
+                <p className='text-justify p-2'>{item.textBody}...<button className='border-2 px-3'>More</button></p>
+              </div>
             </div>
           )
         })}

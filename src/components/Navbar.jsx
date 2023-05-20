@@ -1,10 +1,16 @@
 import React from 'react'
 import { BsJustify } from "react-icons/bs";
+import AnimatedCat from '../assets/animated-cat.gif'
+import TechAcademyBD from '../assets/techacademybd.jpg'
 
 export default function Navbar() {
   return (
     <div className='fixed z-50 flex items-center justify-between w-full p-4 bg-white shadow-md px-7 opacity-95'>
-      <a className='font-semibold' href="/">Techacademybd</a>
+      <div className='flex items-center'>
+        <img className='w-6 pr-1' src={TechAcademyBD} alt="" />
+        <a className='font-semibold' href="/">Techacademybd</a>
+        <img className='w-6 py-1' src={AnimatedCat} alt="" />
+      </div>
       <div className='hidden sm:block basis-96'>
         <nav className='flex justify-around w-full'>
           <a className='font-semibold text-slate-700 hover:underline underline-offset-4' href="#home">Home</a>

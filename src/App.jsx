@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import WhyChoose from './components/WhyChoose'
 import NumberOf from './components/NumberOf'
+import { Fade, Zoom } from "react-awesome-reveal";
 
 export default function App() {
   return (
@@ -16,28 +17,38 @@ export default function App() {
       <section id='home'>
         <Header/>
       </section>
-      
+      <br />
+
       <section id='about'>
-        <About/>
+          <About/>
       </section>
+      <br />
 
       <section id='services'>
         <Services/>
       </section>
+      <br />
 
       <section id='ourteam'>
         <OurTeam/>
       </section>
+      <br />
 
-      <section className='w-full text-center pt-20'>
+      <section>
         <NumberOf/>
       </section>
+      <br />
 
-      <WhyChoose/>
+      <section>
+        <WhyChoose/>
+      </section>
+      <br />
 
       <section id='contact'>
         {/* <Contact/> */}
       </section>
+
+      <br /><br />
 
 
       <Footer/>

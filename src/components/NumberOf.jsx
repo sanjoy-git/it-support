@@ -23,22 +23,22 @@ import { Zoom } from "react-awesome-reveal";
 export default function NumberOf() {
   return (
     <Zoom>
-      <div>
-        <div>
-          <p>200+</p>
-          <p>Days Worked</p>
+      <div className='flex flex-wrap justify-around p-2 pt-20 mx-auto sm:w-10/12'>
+        <div className='flex-grow p-5 mb-2 mr-2 text-center bg-white basis-32'>
+          <p className='pb-2 text-3xl font-bold text-blue-800'>9+</p>
+          <p className='text-sm'>Days Worked</p>
         </div>
-        <div>
-          <p>100+</p>
-          <p>Project Finished</p>
+        <div className='flex-grow p-5 mb-2 mr-2 text-center bg-white basis-32'>
+          <p className='pb-2 text-3xl font-bold text-blue-800'>50+</p>
+          <p className='text-sm'>Project Finished</p>
         </div>
-        <div>
-          <p>10+</p>
-          <p>Dedicated Employees</p>
+        <div className='flex-grow p-5 mb-2 mr-2 text-center bg-white basis-32'>
+          <p className='pb-2 text-3xl font-bold text-blue-800'>10+</p>
+          <p className='text-sm'>Dedicated Employees</p>
         </div>
-        <div>
-          <p>99+</p>
-          <p>Happy Clients</p>
+        <div className='flex-grow p-5 mb-2 mr-2 text-center bg-white basis-32'>
+          <p className='pb-2 text-3xl font-bold text-blue-800'>99+</p>
+          <p className='text-sm'>Happy Clients</p>
         </div>
       </div>
     </Zoom>

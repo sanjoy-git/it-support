@@ -1,29 +1,33 @@
 import React from 'react'
-import AboutMe from '../assets/aboutme.svg'
+import AboutMe from '../assets/talk-1.gif'
 import Fing from '../assets/fing.gif'
+import {Bounce} from 'react-awesome-reveal'
 
 export default function About() {
   return (
-    <div className='flex flex-wrap items-center justify-around pt-14'>
+    <div className='flex flex-wrap items-start text-center justify-around pt-14 mx-auto sm:w-10/12'>
 
-      <div className='text-center basis-96'>
-        <h2 className='p-5 text-xl font-bold text-blue-900 underline underline-offset-4 sm:invisible'>About Me</h2>
-        <img className='w-32 p-2 pt-5 mx-auto sm:w-56' src={AboutMe} alt="" />
+      <div className='basis-72 sm:basis-80'>
+        <h2 className='p-5 text-xl font-bold text-blue-900 underline underline-offset-4 sm:invisible'>About</h2>
+          <img className='p-5 pt-5 pb-0 mx-auto w-8/12 sm:w-10/12 sm:pt-0' src={AboutMe} alt="" />
       </div>
 
-      <div className='text-center basis-80'>
-        <h2 className='invisible p-5 pt-0 text-xl font-bold text-blue-900 underline underline-offset-4 sm:visible'>About Me</h2>
-        <p className='text-justify'>Techacademybd is a cutting-edge IT business. It offers a wide range of IT services and products on a local and global level. We take note of your creative suggestions and implement them as you see fit. Our customer-centric services include web development, app development, artificial intelligence and robotics, eCommerce management, content creation, and many more. Our knowledgeable team always keeps up with new technology and helps other employees get ready for 4IR.</p>
+      <div className='text-center basis-72 sm:basis-5/12'>
+        <h2 className='invisible p-5 pt-0 text-xl font-bold text-blue-900 underline underline-offset-4 sm:visible sm:text-2xl'>About</h2>
+          <p className='text-justify w-full pb-5 sm:text-xl'>
+            At Techacademybd, our primary focus is to provide you with top-notch technology services that empower your business and help you stay ahead in today's competitive landscape. We understand that technology plays a vital role in driving efficiency, innovation, and growth, and we are committed to delivering the highest standards of service and expertise. Our customer-centric services include Digital Marketing, Web Design and Development, Software Development, IT Support and Maintenance, Domain & Hosting Support, etc...
+          </p>
         
-        <div className='flex justify-around'>
+        <div className='flex justify-around items-end'>
           <div>
             <img className='w-10 mx-auto' src={Fing} alt="" />
-            <p>Lutfor Rahaman</p>
+            <p>Khan L Rahaman</p>
             <p className='text-xs'>Founder</p>
           </div>
+          <div className='text-blue-500'>|</div>
           <div>
             <img className='invisible w-10 mx-auto' src={Fing} alt="" />
-            <p>Razib Hossain</p>
+            <p>Ariyan Ahamed Razib</p>
             <p className='text-xs'>Co-Founder</p>
           </div>
         </div>
