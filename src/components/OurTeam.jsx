@@ -5,8 +5,10 @@ import Jamal from '../assets/team/jamal-molla-m.jpg'
 import Lutfor from '../assets/team/lutfor-rahaman-m.jpg'
 import Razib from '../assets/team/razib-hossain-m.jpg'
 import Sanjoy from '../assets/team/sanjoy-roy-m.jpg'
-import Tanvir from '../assets/team/tanvir-ahmed-niloy-m.jpg'
+import Tanvir from '../assets/team/Robin-m.jpg'
 import Imran from '../assets/team/imran-taher-m.jpg'
+import Shoriful from '../assets/team/shoriful-islam-m.jpg'
+import Tasin from '../assets/team/tasin-m.jpg'
 
 
 const team=[
@@ -26,20 +28,31 @@ const team=[
     deg:"Full Stack Developer"
   },
   {
-    img:Jamal,
-    name:"Jamal Molla",
-    deg:"Executive IT"
+    img:Shoriful,
+    name:"Shoriful Islam",
+    deg:"IT Support"
   },
   {
-    img:Tanvir,
-    name:"Tanvir Ahmed Niloy",
-    deg:"Staff-Support"
+    img:Jamal,
+    name:"Jamal Molla",
+    deg:"Executive"
   },
   {
     img:Imran,
     name:"Imran Taher",
     deg:"Staff-Support"
   },
+  {
+    img:Tanvir,
+    name:"Tanvir Ahmed Niloy",
+    deg:"Staff-Support"
+  },  
+  {
+    img:Tasin,
+    name:"Tahsin Pritom",
+    deg:"Staff-Support"
+  },
+
 ]
 
 
@@ -64,14 +77,14 @@ export default function OurTeam() {
 
 
   var settings = {
-    // dots: true,
+    dots: true,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
     autoplay: true,
-    speed: 5000,
-    autoplaySpeed: 5000,
+    speed: 6000,
+    autoplaySpeed: 6000,
     cssEase: "linear",
 
     nextArrow: <SampleArrow />,
@@ -107,7 +120,7 @@ export default function OurTeam() {
 
 
   return (
-    <div className='pt-10 text-center mx-auto w-10/12'>
+    <div className='w-10/12 pt-10 mx-auto text-center'>
       <h2 className='p-5 text-xl font-bold text-blue-900 underline underline-offset-4 sm:text-2xl'>Our Team</h2>
       <Slider {...settings} className='py-3 rounded-md'>
         {
@@ -115,7 +128,7 @@ export default function OurTeam() {
             return(
               <div key={index} className='p-1 py-3 bg-white border-2 rounded-xl'>
                 <img className='mx-auto rounded-full w-28' src={item.img} alt="" />
-                <h3 className='font-semibold pt-1'>{item.name}</h3>
+                <h3 className='pt-1 font-semibold'>{item.name}</h3>
                 <p className='text-sm'>{item.deg}</p>
               </div>
             )
