@@ -5,9 +5,6 @@ import { Zoom } from "react-awesome-reveal";
 import computerEngineer from '../assets/computer-engineer.gif'
 
 export default function Header() {
-  const scrollRef = useRef(null);
-  console.log("helloo:"+scrollRef)
-  const [data, setData] = useState(0)
 
   return (
     <header className='h-auto'>
@@ -28,8 +25,7 @@ export default function Header() {
           <img className='rounded-md' src={computerEngineer} alt="" />
         </div>
       </div>
-
-      {/* <ParticlesUse/> */}
+      <ParticlesUse/>
     </header>
   )
 }

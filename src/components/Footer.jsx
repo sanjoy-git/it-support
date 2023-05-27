@@ -7,7 +7,7 @@ import { VscLocation,VscMail,VscCallIncoming } from "react-icons/vsc";
 
 export default function Footer() {
   return (
-    <div className='w-full h-auto p-1 mt-10 rounded-t-lg bg-gradient-to-r from-gray-700 to-gray-800'>
+    <div className='w-full h-auto p-1 rounded-t-lg bg-gradient-to-r from-gray-700 to-gray-800'>
       
       <div className='flex flex-wrap items-start justify-around text-slate-50'>
 

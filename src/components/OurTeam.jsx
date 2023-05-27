@@ -2,13 +2,14 @@ import React from 'react'
 import Slider from "react-slick";
 
 import Jamal from '../assets/team/jamal-molla-m.jpg'
-import Lutfor from '../assets/team/lutfor-rahaman-m.jpg'
+import Lutfor from '../assets/team/lutfor-rahaman.jpg'
 import Razib from '../assets/team/razib-hossain-m.jpg'
 import Sanjoy from '../assets/team/sanjoy-roy-m.jpg'
 import Tanvir from '../assets/team/Robin-m.jpg'
 import Imran from '../assets/team/imran-taher-m.jpg'
 import Shoriful from '../assets/team/shoriful-islam-m.jpg'
 import Tasin from '../assets/team/tasin-m.jpg'
+import underline from '../assets/svg/underline.svg'
 
 
 const team=[
@@ -121,7 +122,10 @@ export default function OurTeam() {
 
   return (
     <div className='w-10/12 pt-10 mx-auto text-center'>
-      <h2 className='p-5 text-xl font-bold text-blue-900 underline underline-offset-4 sm:text-2xl'>Our Team</h2>
+      <h2 className='p-5 text-xl font-bold text-blue-900 sm:text-2xl'>
+        <span>Our Team</span>
+        <img width={150} className='mx-auto' src={underline} alt="" />
+      </h2>
       <Slider {...settings} className='py-3 rounded-md'>
         {
           team.map((item,index)=>{

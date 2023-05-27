@@ -43,14 +43,8 @@ export default function App() {
         <WhyChoose/>
       </section>
       <br />
-
-      <section id='contact'>
-        {/* <Contact/> */}
-      </section>
-
-      <br /><br />
-
-
+      <br />
+      
       <Footer/>
     </div>
   )
