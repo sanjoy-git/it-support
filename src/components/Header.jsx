@@ -25,7 +25,7 @@ export default function Header() {
           <img className='rounded-md' src={computerEngineer} alt="" />
         </div>
       </div>
-      <ParticlesUse/>
+      {/* <ParticlesUse/> */}
     </header>
   )
 }

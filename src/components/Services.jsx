@@ -43,7 +43,7 @@ export default function Services() {
               <img className='object-cover w-7/12 p-5 mx-auto' src={item.img} alt="" />
               <div className=''>
                 <h2 className='font-bold'>{item.textTitle}</h2>
-                <p className='p-2 text-justify'>{item.textBody}...<button className='px-3 border-2 border-dashed bg-slate-100 rounded-lg'>More</button></p>
+                <p className='p-2 text-justify'>{item.textBody}...<button className='px-3 border-2 border-dashed rounded-lg bg-slate-100 hover:bg-orange-400'>More</button></p>
               </div>
             </div>
           )

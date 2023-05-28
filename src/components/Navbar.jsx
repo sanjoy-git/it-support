@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { BsJustify } from "react-icons/bs";
+import { BsJustify,BsListUl,BsFillXSquareFill } from "react-icons/bs";
 import AnimatedCat from '../assets/animated-cat.gif'
 import TechAcademyBD from '../assets/techacademybd.jpg'
 import Modal from 'react-modal'
@@ -10,12 +10,17 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const showToastMessage = () => {
-  toast.error('Success Notification !', {
+const successMessage = () => {
+  toast.success('Message send successfull.', {
       position: toast.POSITION.TOP_RIGHT
   });
 };
 
+const failMessage = () => {
+  toast.error('Message send faild.', {
+      position: toast.POSITION.TOP_RIGHT
+  });
+};
 
 const successAlert = () => {
   Swal.fire({  
@@ -68,11 +73,11 @@ export default function Navbar() {
           <img className='w-6 py-1' src={AnimatedCat} alt="" />
         </div>
 
-        {/* <div>
-          <button onClick={successAlert}>...</button>
-          <button onClick={showToastMessage}>...</button>
+        <div>
+          {/* <button onClick={successAlert}>...</button>
+          <button onClick={showToastMessage}>...</button> */}
           <ToastContainer />
-        </div> */}
+        </div>
 
         <div className='hidden sm:block basis-96'>
           <nav className='flex justify-around w-full'>
@@ -80,12 +85,12 @@ export default function Navbar() {
             <a className='font-semibold text-slate-700 hover:underline underline-offset-4 hover:text-orange-400' href="#about">About</a>
             <a className='font-semibold text-slate-700 hover:underline underline-offset-4 hover:text-orange-400' href="#services">Services</a>
             <a className='font-semibold text-slate-700 hover:underline underline-offset-4 hover:text-orange-400' href="#ourteam">OurTeam</a>
-            <a className='font-semibold text-slate-700 hover:underline underline-offset-4 hover:text-orange-400 cursor-pointer' onClick={openModal}>Contact</a>
+            <a className='font-semibold cursor-pointer text-slate-700 hover:underline underline-offset-4 hover:text-orange-400' onClick={openModal}>Contact</a>
           </nav>
         </div>
 
         <div className='relative sm:hidden' onClick={()=>setDropDownMenu(!dropDownMenu)}>
-          <i className='text-xl font-bold cursor-pointer text-slate-800 hover:text-orange-400'><BsJustify/></i>
+          <i className='text-xl font-bold cursor-pointer text-slate-800 hover:text-orange-400'><BsListUl/></i>
           {
             dropDownMenu && 
             <nav className='absolute flex flex-col p-4 px-6 bg-white rounded-md -right-2 top-5'>
@@ -93,7 +98,7 @@ export default function Navbar() {
               <a className='font-semibold text-slate-700 hover:underline underline-offset-4 hover:text-orange-400' href="#about">About</a>
               <a className='font-semibold text-slate-700 hover:underline underline-offset-4 hover:text-orange-400' href="#services">Services</a>
               <a className='font-semibold text-slate-700 hover:underline underline-offset-4 hover:text-orange-400' href="#ourteam">OurTeam</a>
-              <a className='font-semibold text-slate-700 hover:underline underline-offset-4 hover:text-orange-400 cursor-pointer' onClick={openModal}>Contact</a>
+              <a className='font-semibold cursor-pointer text-slate-700 hover:underline underline-offset-4 hover:text-orange-400' onClick={openModal}>Contact</a>
             </nav>
           }
         </div>
@@ -103,9 +108,9 @@ export default function Navbar() {
           onRequestClose={closeModal}
           style={customStyles}
         >
-          <div className='w-64 flex flex-col items-start'>
-            <button className='w-8 rounded-md text-red-500 text-xl ring-1 font-bold text-center p-0 -mt-4 -mr-3 hover:bg-red-500 hover:text-slate-50 self-end' onClick={closeModal}>X</button>
-            <Contact/>
+          <div className='flex flex-col items-start w-64'>
+            <button className='self-end w-8 p-0 -mt-2 -mr-3 text-3xl font-bold text-center text-red-500 rounded-md hover:bg-red-500 hover:text-slate-50' onClick={closeModal}><BsFillXSquareFill/></button>
+            <Contact onSuccess={successMessage} onFail={failMessage} onCloseModel={closeModal}/>
           </div>
         </Modal>
     </>

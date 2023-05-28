@@ -3,7 +3,7 @@ import Slider from "react-slick";
 
 import Jamal from '../assets/team/jamal-molla-m.jpg'
 import Lutfor from '../assets/team/lutfor-rahaman.jpg'
-import Razib from '../assets/team/razib-hossain-m.jpg'
+import Razib from '../assets/team/razib-m.jpeg'
 import Sanjoy from '../assets/team/sanjoy-roy-m.jpg'
 import Tanvir from '../assets/team/Robin-m.jpg'
 import Imran from '../assets/team/imran-taher-m.jpg'

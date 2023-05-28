@@ -7,7 +7,7 @@ import { VscLocation,VscMail,VscCallIncoming } from "react-icons/vsc";
 
 export default function Footer() {
   return (
-    <div className='w-full h-auto p-1 rounded-t-lg bg-gradient-to-r from-gray-700 to-gray-800'>
+    <div className='w-full h-auto p-1 py-10 mt-10 rounded-t-lg bg-gradient-to-r from-gray-700 to-gray-800'>
       
       <div className='flex flex-wrap items-start justify-around text-slate-50'>
 
@@ -43,8 +43,8 @@ export default function Footer() {
           <h3 className='py-4 text-xl font-bold'>Contact Info</h3>
           <div className='w-fit'>
             <a href='#' className='flex'><i className='pr-1 text-xl'><VscLocation/></i><span>Headquarter</span>:<span className='pl-1 text-sm'>Mirpur10,Dhaka</span></a>
-            <a href='#' className='flex'><i className='pr-1 text-xl'><VscCallIncoming/></i>(+880)1300939320</a>
-            <a href='#' className='flex'><i className='pr-1 text-xl'><VscMail/></i>info@techacademybd.xyz</a>
+            <a href='tel:+8801300939320' className='flex'><i className='pr-1 text-xl'><VscCallIncoming/></i>(+880)1300939320</a>
+            <a href='mailto:info@techacademybd.xyz' className='flex'><i className='pr-1 text-xl'><VscMail/></i>info@techacademybd.xyz</a>
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@ export default function Footer() {
       {/* copyriten@ */}
 
       <div className='border-t-2 border-stone-500'>
-        <p className='text-sm text-center text-slate-50'>Techacademybd @2020-2025 - All Rights Reserved</p>
+        <p className='pt-1 text-sm text-center text-slate-50'>Techacademybd @2020-2025 - All Rights Reserved</p>
       </div>
 
     </div>
