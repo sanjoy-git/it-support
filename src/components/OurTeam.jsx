@@ -26,7 +26,7 @@ const team=[
   {
     img:Sanjoy,
     name:"Sanjoy Roy",
-    deg:"Full Stack Developer"
+    deg:"Web Developer"
   },
   {
     img:Shoriful,

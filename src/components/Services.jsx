@@ -4,27 +4,32 @@ import webDev from '../assets/web-design-1.jpg'
 import softworeDev from '../assets/softwore.jpg'
 import itSupport from '../assets/it-support-1.png'
 import underline from '../assets/svg/underline.svg'
+import {Link} from 'react-router-dom'
 
 const serviceData=[
   {
     img:digitalMarketing,
     textTitle:'Digital Marketing',
-    textBody:'Digital marketing refers to the practice of promoting products, services, or brands using digital channels and technologies.'
+    textBody:'Digital marketing refers to the practice of promoting products, services, or brands using digital channels and technologies.',
+    route:'digital-marketing'
   },
   {
     img:webDev,
     textTitle:'Web Design and Development',
-    textBody:' IT companies specialize in creating visually appealing and user-friendly websites. They handle everything from website des'
+    textBody:' IT companies specialize in creating visually appealing and user-friendly websites. They handle everything from website des',
+    route:'web-development'
   },
   {
     img:softworeDev,
     textTitle:'Software Development:',
-    textBody:'These companies often specialize in custom software development. They create tailored software solutions to address specifi'
+    textBody:'These companies often specialize in custom software development. They create tailored software solutions to address specifi',
+    route:'software-development'
   },
   {
     img:itSupport,
     textTitle:'IT Support and Maintenance',
-    textBody:'They provide technical support and maintenance services to ensure the smooth operation of IT systems. This can include troub'
+    textBody:'They provide technical support and maintenance services to ensure the smooth operation of IT systems. This can include troub',
+    route:'it-support'
   }
 ]
 
@@ -39,13 +44,13 @@ export default function Services() {
       <div className='flex flex-wrap justify-center w-full'>
         {serviceData && serviceData.map((item,index)=>{
           return(
-            <div key={index} className='flex flex-col justify-between flex-grow pb-5 mb-3 ml-3 bg-white rounded-md basis-68 sm:basis-52 hover:scale-110 hover:border-2' >
+            <Link to={item.route} key={index} className='flex flex-col justify-between flex-grow pb-5 mb-3 ml-3 bg-white rounded-md basis-68 sm:basis-52 hover:scale-110 hover:border-2' >
               <img className='object-cover w-7/12 p-5 mx-auto' src={item.img} alt="" />
               <div className=''>
                 <h2 className='font-bold'>{item.textTitle}</h2>
-                <p className='p-2 text-justify'>{item.textBody}...<button className='px-3 border-2 border-dashed rounded-lg bg-slate-100 hover:bg-orange-400'>More</button></p>
+                <p className='p-2 text-justify'>{item.textBody}...<span className='px-3 border-2 border-dashed rounded-lg bg-slate-100 hover:bg-orange-400'>More</span></p>
               </div>
-            </div>
+            </Link>
           )
         })}
       </div>

@@ -52,7 +52,7 @@ export default function Footer() {
       {/* copyriten@ */}
 
       <div className='border-t-2 border-stone-500'>
-        <p className='pt-1 text-sm text-center text-slate-50'>Techacademybd @2020-2025 - All Rights Reserved</p>
+        <p className='pt-1 text-sm text-center text-slate-50'>Techacademybd @2022-2027 - All Rights Reserved</p>
       </div>
 
     </div>
