@@ -65,7 +65,7 @@ export default function Navbar() {
   window.addEventListener('scroll',()=>setDropDownMenu(false))
 
   const location=useLocation();
-  console.log(location.pathname)
+  // console.log(location.pathname)
 
 
   return (

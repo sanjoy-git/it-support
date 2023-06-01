@@ -3,6 +3,7 @@ import ParticlesUse from './ParticlesUse'
 import Navbar from './Navbar'
 import { Zoom } from "react-awesome-reveal";
 import computerEngineer from '../assets/computer-engineer.gif'
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Header() {
 
@@ -18,6 +19,26 @@ export default function Header() {
             <p className='mb-2 text-xl text-center'>Welcome to Techacademybd</p>
             <p className='mb-5 text-2xl text-center sm:text-2xl'>Hungry For Challenges<span className='font-bold border-b-2'> Impact and More!</span></p>
             <p className='mt-5 text-xl text-center'>One of the pioneer ITES provider company.</p>
+            <p className='pt-5 text-center'>
+              <TypeAnimation
+                sequence={[
+                  'Digital Marketing', // Types 'One'
+                  1000, // Waits 1s
+                  'Web Design and Development', // Deletes 'One' and types 'Two'
+                  2000, // Waits 2s
+                  'Software Development', // Types 'Three' without deleting 'Two'
+                  3000, // Waits 2s
+                  'It Support', // Types 'Three' without deleting 'Two'
+                  () => {
+                    // console.log('Sequence completed'); // Place optional callbacks anywhere in the array
+                  }
+                ]}
+                wrapper="span"
+                cursor={true}
+                repeat={Infinity}
+                style={{ fontSize: '2em', display: 'inline-block' }}
+              />
+            </p>
           </Zoom>
         </div>
 

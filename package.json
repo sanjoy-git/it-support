@@ -22,6 +22,7 @@
     "react-slick": "^0.29.0",
     "react-svg": "^16.1.12",
     "react-toastify": "^9.1.3",
+    "react-type-animation": "^3.0.1",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.7.5",
     "tsparticles": "^2.9.3"
