@@ -1,5 +1,4 @@
 import React from 'react'
-// import digitalMarketing from '../assets/digital-marketing.webp'
 import { TypeAnimation } from 'react-type-animation';
 
 export default function ServicePage(props) {
@@ -8,36 +7,17 @@ export default function ServicePage(props) {
     behavior:'smooth'
   })
 
-  const {titel,img,text} = props.service
+  const {title,img,text} = props.service
 
   
   return (
-    <div className='min-h-screen p-5 bg-slate-50'>
-      <div className='flex flex-col flex-wrap items-center justify-center sm:flex-row'>
-        <img className='float-left p-5 rounded-md w-80' src={img} alt="" />
-        <p>
-          {
-            titel && 
-            <TypeAnimation
-              sequence={[
-                `${titel}`, // Types 'One'
-                1000, // Waits 1s
-                'Digital', // Deletes 'One' and types 'Two'
-                2000, // Waits 2s
-                'Marketing', // Types 'Three' without deleting 'Two'
-                () => {
-                  // console.log('Sequence completed'); // Place optional callbacks anywhere in the array
-                }
-              ]}
-              wrapper="span"
-              cursor={true}
-              repeat={Infinity}
-              style={{ fontSize: '2em', display: 'inline-block' }}
-            />
-          }
-        </p>
+    <div className='min-h-screen px-5 py-1 bg-slate-100'>
+      <div className='min-h-min bg-white flex flex-col flex-wrap items-center justify-center sm:flex-row'>
+        <img className='p-3 rounded-full w-64' src={img} alt="" />
+        <h2 className='text-3xl font-bold py-4'>{title}</h2>
       </div>
-      <p className='w-full text-xl text-justify sm:columns-3 first-letter:text-2xl first-letter:font-bold'>
+      <br />
+      <p className='w-full text-xl gap-20 text-justify sm:columns-2 first-letter:text-2xl first-letter:font-bold'>
         {text}
       </p>
     </div>

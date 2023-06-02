@@ -6,6 +6,7 @@ import Modal from 'react-modal'
 import Contact from './Contact';
 import Swal from 'sweetalert2'
 import {Link,NavLink,useLocation} from 'react-router-dom'
+import { TypeAnimation } from 'react-type-animation';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -134,6 +135,21 @@ export default function Navbar() {
               <ToastContainer />
             </div>
 
+            <div>
+              <TypeAnimation
+                sequence={[
+                  1000,
+                  'welcome', // Types 'One'
+                  2000,
+                  '!', // Types 'One'
+                ]}
+                wrapper="span" 
+                cursor={true}
+                repeat={Infinity}
+                style={{ fontSize: '1.2rem', display: 'inline-block' }}
+              />
+            </div>
+
             <div className='hidden sm:block basis-96'>
               <nav className='flex justify-around w-full'>
                 {/* <a className='font-semibold text-slate-700 hover:underline underline-offset-4 hover:text-orange-400' href="/#services">Home</a> */}
@@ -144,6 +160,8 @@ export default function Navbar() {
                 <a className='font-bold cursor-pointer text-slate-800 hover:underline underline-offset-4 hover:text-orange-400' onClick={openModal}>Contact</a>
               </nav>
             </div>
+
+
 
             <div className='relative sm:hidden' onClick={()=>setDropDownMenu(!dropDownMenu)}>
               <i className='text-xl font-bold cursor-pointer text-slate-800 hover:text-orange-400'><BsListUl/></i>
