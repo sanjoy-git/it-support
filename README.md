@@ -8,9 +8,9 @@ At Techacademybd, our primary focus is to provide you with top-notch technology 
 
 ## Tech Stack
 
-**Client:** React, React-Router-Dom, Axios, TailwindCSS, Etc...
+**Frontend:** React, React-Router-Dom, Axios, TailwindCSS, Etc...
 
-**Server:** Private
+**Backend:** Node.js, Express.js Etc...  (Code is Private) 
 
 **Deployment:** Vite, Share Hosting, Etc...
 
