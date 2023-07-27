@@ -1,7 +1,7 @@
 
 # Techacademybd Frontend
 
-[Techacademybd](https://techacademybd.xyz)
+[Techacademybd](https://techacademybd.predictuse.com)
 
 At Techacademybd, our primary focus is to provide you with top-notch technology services that empower your business and help you stay ahead in today's competitive landscape. We understand that technology plays a vital role in driving efficiency, innovation, and growth, and we are committed to delivering the highest standards of service and expertise. Our customer-centric services include Digital Marketing, Web Design and Development, Software Development, IT Support and Maintenance, Domain & Hosting Support, etc...
 
